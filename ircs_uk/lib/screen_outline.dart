@@ -4,7 +4,9 @@ import 'package:ircs_uk/colors.dart';
 import 'package:ircs_uk/constants.dart';
 
 class ScreenOutline extends StatelessWidget {
-  const ScreenOutline({super.key, required this.showBottomBar});
+  const ScreenOutline({super.key, required this.showBottomBar, required this.builder});
+
+  final Widget Function() builder;
 
   final bool showBottomBar;
 
@@ -22,14 +24,10 @@ class ScreenOutline extends StatelessWidget {
       child: Stack(fit: StackFit.expand, children: [
         Positioned(
             top: Constants.contentStartPost,
-            bottom: Constants.topBottomBarHeight,
-            left: Constants.sideBarMargin,
-            right: Constants.sideBarMargin,
-            child: SingleChildScrollView(
-              child: Column(
-                children: [for (int i = 0; i < 50; i++) Text(i.toString())],
-              ),
-            )),
+            bottom: 0,
+            left: Constants.sideBarWidth,
+            right: Constants.sideBarWidth,
+            child: builder()),
         Positioned(
             left: 0,
             right: 0,

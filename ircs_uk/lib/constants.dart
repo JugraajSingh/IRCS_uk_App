@@ -3,7 +3,7 @@ class Constants {
  static const double topBottomBarHeight = 30;
 
  static const double topBottomBarMargin = 50;
- static const double sideBarMargin = 150;
+ static const double sideBarMargin = 180;
   
  static const double dividerHeight = 5;
 
