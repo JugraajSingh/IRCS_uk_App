@@ -39,39 +39,41 @@ class _CarouselState extends State<Carousel> {
           });
         }
       },
-      child: Container(
-        color: Colors.white,
-        height: widget.height,
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+        
+        child: Container(height: widget.height,
         width: widget.width,
-        child: Stack(
-          fit: StackFit.expand,
-          children: [
-            widget.images[currentImage],
-            Positioned(
-              bottom: 0,
-              left: 0,
-              right: 0,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  for (int i = 0; i < widget.images.length; i++)
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(50)),
-                          color:
-                              i == currentImage ? Colors.white : Colors.black,
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              widget.images[currentImage],
+              Positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    for (int i = 0; i < widget.images.length; i++)
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.all(Radius.circular(50)),
+                            color:
+                                i == currentImage ? Colors.white : Colors.black,
+                          ),
+                          height: 15,
+                          width: 15,
                         ),
-                        height: 15,
-                        width: 15,
-                      ),
-                    )
-                ],
-              ),
-            )
-          ],
+                      )
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
