@@ -40,12 +40,12 @@ class _CarouselState extends State<Carousel> {
         }
       },
       child: ClipRRect(
-        borderRadius: BorderRadius.all(Radius.circular(20)),
+        borderRadius: const BorderRadius.all(Radius.circular(20)),
         
-        child: Container(height: widget.height,
+        child: SizedBox(height: widget.height,
         width: widget.width,
           child: Stack(
-            fit: StackFit.expand,
+           fit: StackFit.expand,
             children: [
               widget.images[currentImage],
               Positioned(

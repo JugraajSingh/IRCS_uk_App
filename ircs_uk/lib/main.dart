@@ -1,6 +1,7 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:ircs_uk/pages/home.dart';
 import 'package:ircs_uk/screen_outline.dart';
 import 'package:ircs_uk/widgets/carousel.dart';
 
@@ -42,30 +43,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: ScreenOutline(
-          showBottomBar: true,
-          builder: () => Column(
-                children: [
-                  Carousel(
-                    height: 220,
-                    width: 300,
-                    images: [
-                      Expanded(
-                          child: Container(
-                        color: Colors.red,
-                      )),
-                      Expanded(
-                          child: Container(
-                        color: Colors.blue,
-                      )),
-                      Expanded(
-                          child: Container(
-                        color: Colors.green,
-                      ))
-                    ],
-                  )
-                ],
-              )),
+      home: const Scaffold(body: HomePage()),
     );
   }
 }

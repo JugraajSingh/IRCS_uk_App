@@ -15,4 +15,6 @@ class Constants {
   static const double labelsStartPos = topBottomBarHeight + 5;
   static const double contentStartPost = labelsStartPos + topLabelHeight * 2 + dividerHeight + 15;
 
+  static const double mainPageCarouselHeight = 220;
+  static const double mainPageCarouselWidth = 300;
 }
