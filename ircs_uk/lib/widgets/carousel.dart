@@ -47,7 +47,7 @@ class _CarouselState extends State<Carousel> {
           fit: StackFit.expand,
           children: [
             widget.images[currentImage],
-            Positioned (
+            Positioned(
               bottom: 0,
               left: 0,
               right: 0,
@@ -59,9 +59,13 @@ class _CarouselState extends State<Carousel> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
-                        height: 20,
-                        width: 20,
-                        color: i == currentImage ? Colors.white : Colors.black,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(50)),
+                          color:
+                              i == currentImage ? Colors.white : Colors.black,
+                        ),
+                        height: 15,
+                        width: 15,
                       ),
                     )
                 ],
