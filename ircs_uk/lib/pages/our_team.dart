@@ -21,8 +21,8 @@ class OurTeam extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-            const TopRow(text: "Our Team"),
-              Carousel(
+              const TopRow(text: "Our Team"),
+              const Carousel(
                   images: [
                     Potrait(image: Assets.potrait_example, designations: [
                       "Shri Kundan Singh Toliya",
@@ -35,16 +35,43 @@ class OurTeam extends StatelessWidget {
                   width: Constants.ourTeamCarouselWidth),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  child: Text("MANAGING COMMITTEE"),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(5)),
-                      color: AppColors.managingCommiteeLabelColor),
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+                  child: Container(
+                    decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: AppColors.managingCommiteeLabelColor),
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                      child: Text(
+                        "MANAGING COMMITTEE",
+                        style: w700.size22,
+                      ),
+                    ),
+                  ),
                 ),
               ),
-              CustomTable(rows: 1, columns: Constants.workingMember.length, borderThickness: 1, cellWidth: 200, builder: (x, y) {
-                return Center(child: Text(Constants.workingMember[y]));
-              },),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: CustomTable(
+                  rows: 1,
+                  columns: Constants.workingMember.length,
+                  borderThickness: 1,
+                  cellWidth: 300,
+                  builder: (x, y) {
+                    return Center(
+                        child: Padding(
+                      padding: const EdgeInsets.all(5.0),
+                      child: Text(
+                        Constants.workingMember[y],
+                        style: w500.size20,
+                        textAlign: TextAlign.center,
+                      ),
+                    ));
+                  },
+                ),
+              ),
+              SizedBox(height: 20,)
             ],
           ),
         );

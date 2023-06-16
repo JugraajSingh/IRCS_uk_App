@@ -30,7 +30,8 @@ class EventList extends StatelessWidget {
                             Navigator.push(context, Routes.particularEvent("Blood\nDonation\nCamp"));
                           },
                           child: Container(
-                            color: Colors.black,
+                            decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)), color: Colors.black),
+//                            color: Colors.black,
                             height: 125,
                             width: 125,
                           ),

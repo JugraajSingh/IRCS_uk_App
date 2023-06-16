@@ -13,7 +13,7 @@ class ParticularEvent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenOutline(
-      showBottomBar: true,
+      showBottomBar: false,
       builder: () => SingleChildScrollView(
           child: Column(
         children: [
@@ -26,7 +26,8 @@ class ParticularEvent extends StatelessWidget {
               return Center(child: Text("Count"));
             }
             return Container();
-          })
+          }),
+          SizedBox(height: 30,)
         ],
       )),
     );

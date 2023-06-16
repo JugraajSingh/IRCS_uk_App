@@ -1,9 +1,9 @@
 class Constants {
-  static const double sideBarWidth = 30;
-  static const double topBottomBarHeight = 30;
+  static const double sideBarWidth = 0;
+  static const double topBottomBarHeight = 20;
 
-  static const double topBottomBarMargin = 50;
-  static const double sideBarMargin = 180;
+  static const double topBottomBarMargin = 30;
+  static const double sideBarMargin = 100;
 
   static const double dividerHeight = 5;
 
