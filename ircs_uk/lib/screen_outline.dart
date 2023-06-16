@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:ircs_uk/assets.dart';
 import 'package:ircs_uk/colors.dart';
 import 'package:ircs_uk/constants.dart';
-import 'package:ircs_uk/utils/text_styles.dart';
 
 class ScreenOutline extends StatelessWidget {
-  const ScreenOutline({super.key, required this.showBottomBar, required this.builder});
+  const ScreenOutline(
+      {super.key, required this.showBottomBar, required this.builder});
 
   final Widget Function() builder;
 
@@ -37,13 +37,37 @@ class ScreenOutline extends StatelessWidget {
               child: Column(
                 children: [
                   Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                    Assets.screen_base_label,
-                    height: Constants.topLabelHeight,
-                    width: Constants.topLabelWidth,
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+                          child: Image.asset(
+                            Assets.screen_base_logo,
+                            height: Constants.topLogoSize,
+                            width: Constants.topLogoSize,
+                          ),
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Image.asset(
+                              Assets.screen_base_ircs,
+                              height: Constants.ircsHeight,
+                              width: Constants.ircsWidth,
+                            ),
+                            Image.asset(
+                              Assets.screen_base_ukbranch,
+                              height: Constants.stateBranchHeight,
+                              width: Constants.stateBranchWidth,
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-            ),
                   Container(
                     height: Constants.dividerHeight,
                     color: AppColors.sideBarColor,

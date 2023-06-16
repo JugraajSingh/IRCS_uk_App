@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ircs_uk/assets.dart';
 import 'package:ircs_uk/constants.dart';
 import 'package:ircs_uk/routes.dart';
 import 'package:ircs_uk/screen_outline.dart';
@@ -22,22 +23,29 @@ class EventList extends StatelessWidget {
                   const TopRow(text: "Event List"),
 
                   Gallery(images: [
-                    for (int i = 0; i < 9; i++)
+//                   for (int i = 0; i < 9; i++)
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.push(context, Routes.particularEvent("Blood\nDonation\nCamp"));
+                            Navigator.push(context, Routes.particularEvent("Yoga Day"));
                           },
-                          child: Container(
-                            decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)), color: Colors.black),
-//                            color: Colors.black,
-                            height: 125,
-                            width: 125,
+                          child: Column(
+                            children: [
+                              ClipRRect(
+                                borderRadius: const BorderRadius.all(Radius.circular(10)),
+                                child: Container(
+                                  child: Image.asset(Assets.eventExample1, fit: BoxFit.fill,),
+                                  height: 125,
+                                  width: 250,
+                                ),
+                              ),
+                              Text("Yoga Day", style: w800.size20,)
+                            ],
                           ),
                         ),
                       )
-                  ], itemsPerRow: 2)
+                  ], itemsPerRow: 1)
                 ],
               ),
             ));

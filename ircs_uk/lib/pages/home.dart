@@ -23,55 +23,50 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text("Home", style: w500.colorBlack.size36),
-                  Carousel(
-                    height: Constants.mainPageCarouselHeight,
-                    width: Constants.mainPageCarouselWidth,
-                    images: [
-                      Container(
-                        color: Colors.red,
-                      ),
-                      Container(
-                        color: Colors.blue,
-                      ),
-                      Container(
-                        color: Colors.green,
-                      )
-                    ],
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 10, 0, 5),
+                    child: Carousel(
+                      height: Constants.mainPageCarouselHeight,
+                      width: Constants.mainPageCarouselWidth,
+                      images: [
+                        Image.asset(Assets.galleryExample1, fit: BoxFit.fill),
+                        Image.asset(Assets.galleryExample2, fit: BoxFit.fill),
+                        Image.asset(Assets.galleryExample3, fit: BoxFit.fill),
+                      ],
+                    ),
                   ),
-                  Text("RECENT ACTICITIES", style: w500.colorBlack.size20),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(5, 25, 5, 5),
+                    child: Text("RECENT ACTICITIES", style: w500.colorBlack.size20),
+                  ),
                   Gallery(
                       itemsPerRow: 2,
                       decorater: (x) { return Padding(
                             padding: const EdgeInsets.all(1.0),
-                            child: Container(
-                                decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)), color: Colors.black),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(2.0),
-                                  child: x,
-                                )),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.all(Radius.circular(15)),
+                              child: Container(
+                            //                                decoration: const BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)), color: Colors.black),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(2.0),
+                                    child: x,
+                                  )),
+                            ),
                           );},
                       images: [
-                        Container(
-                          color: Colors.red,
-                          height: 125,
-                          width: 125,
-                        ),
-                        Container(
-                          color: Colors.green,
-                          height: 125,
-                          width: 125,
-                        ),
-                        Container(
-                          color: Colors.blue,
-                          height: 125,
-                          width: 125,
-                        ),
+                      Image.asset(Assets.recentExample1, fit: BoxFit.fill, height: 150, width: 150,),
+                      Image.asset(Assets.recentExample2, fit: BoxFit.fill, height: 150, width: 150,),
+                      Image.asset(Assets.recentExample3, fit: BoxFit.fill, height: 150, width: 150,),
+                      Image.asset(Assets.recentExample4, fit: BoxFit.fill, height: 150, width: 150,),
                       ]),
-                  BigButton(
-                      text: "Events",
-                      onTap: () {
-                        Navigator.push(context, Routes.eventListPage);
-                      }),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                    child: BigButton(
+                        text: "Events",
+                        onTap: () {
+                          Navigator.push(context, Routes.eventListPage);
+                        }),
+                  ),
                   BigButton(text: "About Us", onTap: () {
                         Navigator.push(context, Routes.aboutUsPage);
                   }),

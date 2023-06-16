@@ -9,12 +9,15 @@ class Constants {
 
   static const double topLogoSize = 50;
 
-  static const double topLabelHeight = 50;
-  static const double topLabelWidth = 300;
+  static const double ircsHeight = 50;
+  static const double ircsWidth = 300;
+
+  static const double stateBranchHeight = 50;
+  static const double stateBranchWidth = 200;
 
   static const double labelsStartPos = topBottomBarHeight + 5;
   static const double contentStartPost =
-      labelsStartPos + topLabelHeight * 2 + dividerHeight + 15;
+      labelsStartPos + ircsHeight * 2 + dividerHeight + 15;
 
   static const double mainPageCarouselHeight = 220;
   static const double mainPageCarouselWidth = 300;

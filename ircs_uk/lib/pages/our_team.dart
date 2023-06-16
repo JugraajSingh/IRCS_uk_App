@@ -29,16 +29,23 @@ class OurTeam extends StatelessWidget {
                       "Lt. Gen. Gurmit Singh",
                       "Hon'ble Governor",
                       "President",
-                      "Red Cross Uttarakhand",
+                      "Red Cross Society",
+                      "Uttarakhand"
                     ]),
                     Potrait(
                       image: Assets.kundanSinghPotrait, designations: [
                       "Shri Kundan Singh Toliya",
                       "Chairman",
                       "Red Cross Society",
-                      " "
+                      "Uttarakhand"
 //                      "Uttarakhand"
                     ]),
+                    Potrait(image: Assets.dhanSinghPotrait, designations: [
+                      "Dr. Dhan Singh Rawat",
+                      "Vice President",
+                      "Red Cross Society",
+                      "Uttarakhand"
+                    ])
                   ],
                   height: Constants.ourTeamCarouselHeight,
                   width: Constants.ourTeamCarouselWidth),
