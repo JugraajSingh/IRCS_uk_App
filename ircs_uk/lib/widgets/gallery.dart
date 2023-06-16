@@ -28,37 +28,5 @@ class Gallery extends StatelessWidget {
 
   Widget _getWidgetDecorated(int index) {
     return decorater == null ? images[index] : decorater!(images[index]);
-    return Padding(
-      padding: const EdgeInsets.all(1.0),
-      child: Container(
-          color: Colors.black,
-          child: Padding(
-            padding: const EdgeInsets.all(2.0),
-            child: images[index],
-          )),
-    );
   }
-  /*
-  const Gallery({super.key, required this.height, required this.width, required this.images});
-  
-  final double height;
-  final double width;
-  final List<Widget> images;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(width: width,
-    height: height,
-      child: GridView(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-      crossAxisCount: 2,
-      ),
-      children: [
-        for (int i = 0; i < images.length; i++)
-        FittedBox(child: Container(color: AppColors.sideBarColor, child: Padding(padding: EdgeInsets.all(5), child: images[i])),)
-      ],
-    ),
-    );
-  }
-  */
 }

@@ -1,6 +1,6 @@
 class Constants {
   static const double sideBarWidth = 0;
-  static const double topBottomBarHeight = 20;
+  static const double topBottomBarHeight = 0;
 
   static const double topBottomBarMargin = 30;
   static const double sideBarMargin = 100;

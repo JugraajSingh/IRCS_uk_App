@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                       decorater: (x) { return Padding(
                             padding: const EdgeInsets.all(1.0),
                             child: Container(
-                                color: Colors.black,
+                                decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(10)), color: Colors.black),
                                 child: Padding(
                                   padding: const EdgeInsets.all(2.0),
                                   child: x,
@@ -83,7 +83,7 @@ class HomePage extends StatelessWidget {
                   BigButton(text: "Developers", onTap: () {
                     Navigator.push(context, Routes.developersPage);
                   }),
-                  SizedBox(
+                  const SizedBox(
                     height: 150,
                   ),
                 ],

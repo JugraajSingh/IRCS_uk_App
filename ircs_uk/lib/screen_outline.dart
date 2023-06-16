@@ -38,30 +38,11 @@ class ScreenOutline extends StatelessWidget {
                 children: [
                   Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Image.asset(
-                    Assets.screen_base_logo,
-                    height: Constants.topLogoSize,
-                    width: Constants.topLogoSize,
+              child: Image.asset(
+                    Assets.screen_base_label,
+                    height: Constants.topLabelHeight,
+                    width: Constants.topLabelWidth,
                   ),
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Image.asset(
-                        Assets.screen_base_label,
-                        height: Constants.topLabelHeight,
-                        width: Constants.topLabelWidth,
-                      ),
-                      Text("Uttarakhand State Branch", style: w500.size18.copyWith(color: Colors.red.shade800))
-//                      Image.asset(Assets.screen_base_label,
-//                          height: Constants.topLabelHeight, width: Constants.topLabelWidth)
-                    ],
-                  )
-                ],
-              ),
             ),
                   Container(
                     height: Constants.dividerHeight,

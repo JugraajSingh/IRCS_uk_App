@@ -24,7 +24,7 @@ class Potrait extends StatelessWidget {
               shape: BoxShape.circle,
               image: DecorationImage(
                   fit: BoxFit.fill,
-                  image: Image.asset(Assets.potrait_example).image),
+                  image: Image.asset(image).image),
             )),
           )),
           for (int i = 0; i < designations.length; i++) Text(designations[i], style: w400.size16,),

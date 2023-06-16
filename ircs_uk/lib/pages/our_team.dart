@@ -24,12 +24,21 @@ class OurTeam extends StatelessWidget {
               const TopRow(text: "Our Team"),
               const Carousel(
                   images: [
-                    Potrait(image: Assets.potrait_example, designations: [
+                    Potrait(
+                      image: Assets.ltGurmitSinghPotrait, designations: [
+                      "Lt. Gen. Gurmit Singh",
+                      "Hon'ble Governor",
+                      "President",
+                      "Red Cross Uttarakhand",
+                    ]),
+                    Potrait(
+                      image: Assets.kundanSinghPotrait, designations: [
                       "Shri Kundan Singh Toliya",
                       "Chairman",
                       "Red Cross Society",
-                      "Uttarakhand"
-                    ])
+                      " "
+//                      "Uttarakhand"
+                    ]),
                   ],
                   height: Constants.ourTeamCarouselHeight,
                   width: Constants.ourTeamCarouselWidth),
@@ -71,7 +80,7 @@ class OurTeam extends StatelessWidget {
                   },
                 ),
               ),
-              SizedBox(height: 20,)
+              const SizedBox(height: 20,)
             ],
           ),
         );
