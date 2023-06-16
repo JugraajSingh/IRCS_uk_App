@@ -72,10 +72,17 @@ class HomePage extends StatelessWidget {
                       onTap: () {
                         Navigator.push(context, Routes.eventListPage);
                       }),
-                  BigButton(text: "About Us", onTap: () {}),
-                  BigButton(text: "Contact Us", onTap: () {}),
-                  BigButton(text: "Our Team", onTap: () {}),
-                  BigButton(text: "Developers", onTap: () {}),
+                  BigButton(text: "About Us", onTap: () {
+                        Navigator.push(context, Routes.aboutUsPage);
+                  }),
+                  BigButton(text: "Contact Us", onTap: () {
+                        Navigator.push(context, Routes.contactUsPage);}),
+                  BigButton(text: "Our Team", onTap: () {
+                        Navigator.push(context, Routes.ourTeamPage);
+                      }),
+                  BigButton(text: "Developers", onTap: () {
+                    Navigator.push(context, Routes.developersPage);
+                  }),
                   SizedBox(
                     height: 150,
                   ),

@@ -14,12 +14,19 @@ class EventList extends StatelessWidget {
     return ScreenOutline(
         showBottomBar: false,
         builder: () => SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Gallery(images: [for (int i = 0; i < 9; i++) Container(height: 125, width: 125,)], itemsPerRow: 2)
+                  Gallery(images: [
+                    for (int i = 0; i < 9; i++)
+                      Container(
+                        color: Colors.black,
+                        height: 125,
+                        width: 125,
+                      )
+                  ], itemsPerRow: 2)
                 ],
               ),
-        ));
+            ));
   }
 }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swipe_detector/flutter_swipe_detector.dart';
-import 'package:ircs_uk/colors.dart';
 
 class Gallery extends StatelessWidget {
   const Gallery({super.key, required this.images, required this.itemsPerRow, this.decorater});

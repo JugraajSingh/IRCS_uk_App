@@ -2,8 +2,6 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:ircs_uk/pages/home.dart';
-import 'package:ircs_uk/screen_outline.dart';
-import 'package:ircs_uk/widgets/carousel.dart';
 
 const bool USE_DEVICE_PREVIEW = true;
 
@@ -43,7 +41,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Scaffold(body: HomePage()),
+      home: const HomePage(),
     );
   }
 }
