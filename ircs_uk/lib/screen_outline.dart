@@ -38,26 +38,29 @@ class ScreenOutline extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Row(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisSize: MainAxisSize.max,
                       children: [
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(0, 0, 20, 0),
+
+                        Image.asset(
+                              Assets.screen_base_ircs,
+                              height: Constants.ircsHeight,
+                              width: Constants.ircsWidth,
+                            )
+                        ,
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 0, 20, 0),
                           child: Image.asset(
                             Assets.screen_base_logo,
                             height: Constants.topLogoSize,
                             width: Constants.topLogoSize,
                           ),
                         ),
-                        Column(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            Image.asset(
-                              Assets.screen_base_ircs,
-                              height: Constants.ircsHeight,
-                              width: Constants.ircsWidth,
-                            ),
                             Image.asset(
                               Assets.screen_base_ukbranch,
                               height: Constants.stateBranchHeight,

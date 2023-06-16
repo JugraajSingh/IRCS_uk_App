@@ -9,11 +9,11 @@ class Constants {
 
   static const double topLogoSize = 50;
 
-  static const double ircsHeight = 50;
-  static const double ircsWidth = 300;
+  static const double ircsHeight = 60;
+  static const double ircsWidth = 325;
 
   static const double stateBranchHeight = 50;
-  static const double stateBranchWidth = 200;
+  static const double stateBranchWidth = 220;
 
   static const double labelsStartPos = topBottomBarHeight + 5;
   static const double contentStartPost =
