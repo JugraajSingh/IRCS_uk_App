@@ -7,6 +7,7 @@ import 'package:ircs_uk/utils/text_styles.dart';
 import 'package:ircs_uk/widgets/carousel.dart';
 import 'package:ircs_uk/widgets/potrait.dart';
 import 'package:ircs_uk/widgets/table.dart';
+import 'package:ircs_uk/widgets/top_row.dart';
 
 class OurTeam extends StatelessWidget {
   const OurTeam({super.key});
@@ -20,22 +21,7 @@ class OurTeam extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  GestureDetector(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                      child: const Icon(Icons.arrow_left, size: 100)),
-                  Text(
-                    "Our Team",
-                    textAlign: TextAlign.center,
-                    style: w700.size30,
-                  ),
-                  const Spacer()
-                ],
-              ),
+            const TopRow(text: "Our Team"),
               Carousel(
                   images: [
                     Potrait(image: Assets.potrait_example, designations: [
