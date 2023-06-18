@@ -33,7 +33,7 @@ class Constants {
 
   static const double managingCommiteTableWidth = 300;
 
-  static const List<String> developres = ["Purujit Padhy", "Yashvardan Sharma", "Pratyush Aggarwal", "Ishika Bhandari", "Sanya Agarwal"];
+  static const List<String> developres = ["Purujit Padhy", "Yashvardan Sharma", "Pratyush Aggarwal","Jugraaj Singh", "Ishika Bhandari", "Sanya Agarwal" ];
 
   static const List<String> workingMember = [
     "Shri Mohan Khatri",
